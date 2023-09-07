@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello React</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- my app renders here -->
+    </div>
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script>
+      ReactDOM.render(
+        React.createElement(
+          "h1",
+          { id: "my-heading" },
+          /*
+          React.createElement("span", null, "Hello"),
+          " world!"
+        */
+          React.createElement(
+            "span",
+            null,
+            "Hello ",
+            React.createElement("em", null, "Wonderful")
+          ),
+          " world!"
+        ),
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
